@@ -1,5 +1,4 @@
-from SimpleIf import cornerstoreStockManagement
-from SimpleIf import storePromotion
+from SimpleIf import cornerstoreStockManagement, storePromotion, salesGoal, diningRoomSetDelivry, productWeight
 
 def main():
 
