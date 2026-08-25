@@ -14,10 +14,27 @@ def storeCredit():
         return "Venta denegada: El cliente no está registrado en la pulpería"
 
 def deliveryService():
-#     Tu misión: Un emprendimiento calcula una tarifa simulada según zona urbana o rural y,
-#      dentro de cada zona, según si el paquete supera 5 kg. Propón tarifas y calcula el total.
-#     Pista: Decide primero la zona y después el peso.
     clearConsole()
+    zone = input("Ingrese la zona de entrega (Urbana/Rural): ").strip().lower()
+
+    if zone == "urbana":
+        weight = float(input("Ingrese el peso del paquete en kg: "))
+        if weight > 5:
+            rate = 80.0
+            return f"Zona Urbana (Paquete > 5 kg): La tarifa de envío es C$ {rate:.2f}"
+        else:
+            rate = 50.0
+            return f"Zona Urbana (Paquete <= 5 kg): La tarifa de envío es C$ {rate:.2f}"
+    elif zone == "rural":
+        weight = float(input("Ingrese el peso del paquete en kg: "))
+        if weight > 5:
+            rate = 150.0
+            return f"Zona Rural (Paquete > 5 kg): La tarifa de envío es C$ {rate:.2f}"
+        else:
+            rate = 100.0
+            return f"Zona Rural (Paquete <= 5 kg): La tarifa de envío es C$ {rate:.2f}"
+    else:
+        return "Zona no válida. Ingrese 'Urbana' o 'Rural'."
 
 def coffeeGrading():
     #     Clasificación de café
