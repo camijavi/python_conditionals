@@ -37,12 +37,24 @@ def salesGoal():
         return f"No se logró la meta diaria. Faltaron C$ {missing:.2f} para cumplir la meta"
 
 
-
-
-
 def diningRoomSetDelivry():
     clearConsole()
 
+    delivery = float(input("Ingrese el monto de la entrega: "))
+
+    if delivery >= 300:
+        return f"La compra es mayor de C$ 300. El envío es totalmente gratis"
+    else:
+        surcharge = delivery + 40 
+        return f"La compra es menor de C$ 300. Su total a pagar es de C$ {surcharge}, por el envío"
+ 
 
 def productWeight():
     clearConsole()
+
+    weight = float(input("Ingrese el peso del saco: "))
+
+    if weight < 46:
+        return "El peso del saco está por debajo del peso esperado (46 Kg)."
+    else:
+        return "El peso de este saco cumple con el peso esperdo (46kg)"
