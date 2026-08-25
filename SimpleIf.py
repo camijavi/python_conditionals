@@ -25,7 +25,19 @@ def storePromotion():
     
 
 def salesGoal():
-  clearConsole()
+    clearConsole()
+    totalSold = float(input("Ingrese el total vendido el día de hoy: "))
+
+    if totalSold > 4000:
+        return f"ÉXITO: Se superó la meta diaria.\nEl día de hoy se alcanzaron C$ {totalSold:.2f}"
+    elif totalSold == 4000:
+        return "ÉXITO: Se logró llegar a la meta diaria de C$ 4000.00"
+    else:
+        missing = 4000 - totalSold
+        return f"No se logró la meta diaria. Faltaron C$ {missing:.2f} para cumplir la meta"
+
+
+
 
 
 def diningRoomSetDelivry():
