@@ -13,8 +13,15 @@ def cornerstoreStockManagement():
 
 
 def storePromotion():
-  clearConsole()
+    clearConsole()
+    sale = float(input("Ingrese el monto de la venta: "))
 
+    if sale > 1500:
+        discount = sale * 0.10 
+        total = sale - discount
+        return f"Su compra supera los C$ 1500. Se le aplicó un descuento del 10%\nEl total a pagar es C$ {total:.2f}"
+    else:
+        return "No se le puede aplicar descuento. Su compra no supera los C$1500"
     
 
 def salesGoal():
