@@ -1,8 +1,7 @@
-from SimpleIf import stockManagement
+from SimpleIf import cornerstoreStockManagement
 
 def main():
 
-    # Use match case 
-    cornerstoreStockManagement()
+    print(cornerstoreStockManagement())
 
 main()
