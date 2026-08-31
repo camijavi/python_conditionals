@@ -27,8 +27,9 @@ from WhileLoops import (
     deliveryGas,
     stockReplenishment
 )
+from Components import invalidOptionMessage
 
-from UI import showMainMenu, showSimpleIfMenu, showNestedIfMenu
+from UI import showMainMenu, showSimpleIfMenu, showNestedIfMenu, showForLoopMenu, showWhileLoopMenu, pause
 
 
 def handleSimpleIf():
@@ -48,8 +49,8 @@ def handleSimpleIf():
             case "0":
                 break
             case _:
-                print("\nOpción no válida. Intente de nuevo.")
-        input("\nPresione Enter para continuar...")
+                invalidOptionMessage()
+        pause()
 
 
 def handleNestedIf():
@@ -69,12 +70,12 @@ def handleNestedIf():
             case "0":
                 break
             case _:
-                print("\nOpción no válida. Intente de nuevo.")
-        input("\nPresione Enter para continuar...")
+               invalidOptionMessage()
+        pause()
 
 def handleForLoop():
     while True:
-        option = showForfMenu()
+        option = showForLoopMenu()
         match option:
             case "1":
                 print("\n" + miniSuperSales())
@@ -89,12 +90,12 @@ def handleForLoop():
             case "0":
                 break
             case _:
-                print("\nOpción no válida. Intente de nuevo.")
-        input("\nPresione Enter para continuar...")
+                invalidOptionMessage()
+        pause()
 
 def handleWhileLoop():
     while True:
-        option = showForfMenu()
+        option = showWhileLoopMenu()
         match option:
             case "1":
                 print("\n" + cashClosing())
@@ -109,9 +110,9 @@ def handleWhileLoop():
             case "0":
                 break
             case _:
-                print("\nOpción no válida. Intente de nuevo.")
-        input("\nPresione Enter para continuar...")
-
+                invalidOptionMessage()
+        pause()
+    
 def main():
     while True:
         choice = showMainMenu()
@@ -128,8 +129,8 @@ def main():
                 print("\n¡Gracias por utilizar el sistema! Hasta luego.\n")
                 break
             case _:
-                print("\nOpción no válida. Intente de nuevo.")
-                input("\nPresione Enter para continuar...")
+                invalidOptionMessage()
+                pause()
 
 
 if __name__ == "__main__":
