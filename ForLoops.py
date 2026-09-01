@@ -1,7 +1,5 @@
 from Components import clearConsole 
 
-
-
 def miniSuperSales():
     clearConsole()
     total = 0
@@ -12,7 +10,6 @@ def miniSuperSales():
     print("Total de la semana:", total)
     print("Promedio diario:", total/7)
     
-
 
 
 def coffeeReception():
@@ -51,8 +48,6 @@ def stockChecking():
 
 
 def breadProduction():
-    # Una panadería registra durante 6 días la producción y las ventas.
-    # Calcula totales y producto sobrante.
     clearConsole()
     overstock = 0
     totalSold = 0
@@ -73,10 +68,7 @@ def breadProduction():
 
 
 def serviceEvaluation():
-    # Un restaurante recoge 10 calificaciones entre 1 y 5.
-    # Calcula el promedio y cuenta cuántas fueron 4 o 5.
     clearConsole()
-
     total = 0
     highRating = 0
     ratingAverage = 0.0
