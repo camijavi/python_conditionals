@@ -26,11 +26,29 @@ def coffeeReception():
     return(f"El peso total de los 5 sacos es: {totalWeight} Lbs")
 
 
-# def stockChecking():
-#     # Una distribuidora revisa 8 productos.
-#     # Solicita nombre y existencia; muestra los que
-#     # tienen menos de 10 unidades y cuenta las alertas.
-#     clearConsole()
+def stockChecking():
+    clearConsole()
+
+    lowStock = 0
+    lowStockProducts = []
+
+    print("Ingrese los datos solicitados: ")
+    for p in range(1,9):
+        productName = input(f"Nombre del producto ({p}): ")
+        currentStock = int(input("Cantidad en existencia: "))
+
+        if currentStock < 10:
+            lowStockProducts.append(f"{productName} ({currentStock})")
+    
+    print ("Los siguientes productos tienen menos de 10 unidades en existencia: ")
+    for stock in lowStockProducts:
+        print (stock)
+        
+    return (f"Hay {len(lowStockProducts)} productos con una alerta de inventario bajo!")  # len is short for lenght. (counts and returns the number of items inside an object and that's what i need rn)
+
+
+
+
 
 # def breadProduction():
 #     # Una panadería registra durante 6 días la producción y las ventas.
