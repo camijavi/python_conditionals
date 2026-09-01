@@ -12,7 +12,24 @@ from NestedIf import (
     accommodationBooking,
     hardwareSales
 )
-from UI import showMainMenu, showSimpleIfMenu, showNestedIfMenu
+from ForLoops import (
+    miniSuperSales,
+    coffeeReception,
+    stockChecking,
+    breadProduction,
+    serviceEvaluation
+)
+
+from WhileLoops import (
+    cashClosing,
+    systemAccess,
+    orderQty,
+    deliveryGas,
+    stockReplenishment
+)
+from Components import invalidOptionMessage
+
+from UI import showMainMenu, showSimpleIfMenu, showNestedIfMenu, showForLoopMenu, showWhileLoopMenu, pause
 
 
 def handleSimpleIf():
@@ -32,8 +49,8 @@ def handleSimpleIf():
             case "0":
                 break
             case _:
-                print("\nOpción no válida. Intente de nuevo.")
-        input("\nPresione Enter para continuar...")
+                invalidOptionMessage()
+        pause()
 
 
 def handleNestedIf():
@@ -53,10 +70,49 @@ def handleNestedIf():
             case "0":
                 break
             case _:
-                print("\nOpción no válida. Intente de nuevo.")
-        input("\nPresione Enter para continuar...")
+               invalidOptionMessage()
+        pause()
 
+def handleForLoop():
+    while True:
+        option = showForLoopMenu()
+        match option:
+            case "1":
+                print("\n" + miniSuperSales())
+            case "2":
+                print("\n" + coffeeReception())
+            case "3":
+                print("\n" + stockChecking())
+            case "4":
+                print("\n" + breadProduction())
+            case "5":
+                print("\n" + serviceEvaluation())
+            case "0":
+                break
+            case _:
+                invalidOptionMessage()
+        pause()
 
+def handleWhileLoop():
+    while True:
+        option = showWhileLoopMenu()
+        match option:
+            case "1":
+                print("\n" + cashClosing())
+            case "2":
+                print("\n" + systemAccess())
+            case "3":
+                print("\n" + orderQty())
+            case "4":
+                print("\n" + deliveryGas())
+            case "5":
+                print("\n" + stockReplenishment())
+            case "0":
+                break
+            case _:
+                invalidOptionMessage()
+        pause()
+    
 def main():
     while True:
         choice = showMainMenu()
@@ -65,12 +121,16 @@ def main():
                 handleSimpleIf()
             case "2":
                 handleNestedIf()
+            case "3":
+                handleForLoop()
+            case "4":
+                handleWhileLoop()
             case "0":
                 print("\n¡Gracias por utilizar el sistema! Hasta luego.\n")
                 break
             case _:
-                print("\nOpción no válida. Intente de nuevo.")
-                input("\nPresione Enter para continuar...")
+                invalidOptionMessage()
+                pause()
 
 
 if __name__ == "__main__":
