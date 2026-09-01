@@ -27,7 +27,7 @@ from WhileLoops import (
     deliveryGas,
     stockReplenishment
 )
-from Components import invalidOptionMessage
+from Components import invalidOptionMessage, pause
 
 from UI import showMainMenu, showSimpleIfMenu, showNestedIfMenu, showForLoopMenu, showWhileLoopMenu, pause
 
