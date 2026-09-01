@@ -11,6 +11,8 @@ def showMainMenu():
     drawHeader("SISTEMA DE EJERCICIOS CONDICIONALES")
     print(" [1] Ejercicios con 'If Simples'")
     print(" [2] Ejercicios con 'If Anidados'")
+    print(" [3] Ejercicios con 'Búcles con For'")
+    print(" [4] Ejercicios con 'Búcles con While'")
     print(" [0] Salir")
     print("-" * 55)
     return input("Seleccione una opción: ").strip()
