@@ -50,10 +50,27 @@ def stockChecking():
 
 
 
-# def breadProduction():
-#     # Una panadería registra durante 6 días la producción y las ventas.
-#     # Calcula totales y producto sobrante.
-#     clearConsole()
+def breadProduction():
+    # Una panadería registra durante 6 días la producción y las ventas.
+    # Calcula totales y producto sobrante.
+    clearConsole()
+    overstock = 0
+    totalSold = 0
+    totalMade = 0
+    for days in range(1,7):
+        print(f"DÍA [{days}]")
+
+        qtyMade= int(input("Cantida de productos hechos: "))
+        qtySold = int(input("Cantidad de productos vendidos: "))
+        
+        totalMade += qtyMade
+        totalSold += qtySold
+    
+    overstock = totalMade - totalSold
+    print(f"Total hecho {totalMade}")
+    print(f"Total vendido {totalSold}")
+    print(f"Sobrantes {overstock}")
+
 
 # def serviceEvaluation():
 #     # Un restaurante recoge 10 calificaciones entre 1 y 5.
