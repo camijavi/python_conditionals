@@ -72,7 +72,21 @@ def breadProduction():
     print(f"Sobrantes {overstock}")
 
 
-# def serviceEvaluation():
-#     # Un restaurante recoge 10 calificaciones entre 1 y 5.
-#     # Calcula el promedio y cuenta cuántas fueron 4 o 5.
-#     clearConsole()
+def serviceEvaluation():
+    # Un restaurante recoge 10 calificaciones entre 1 y 5.
+    # Calcula el promedio y cuenta cuántas fueron 4 o 5.
+    clearConsole()
+
+    total = 0
+    highRating = 0
+    ratingAverage = 0.0
+    print("Ingrese una calificación (★ 1- 5) ")
+    for r in range(1,11):
+        restaurantRating = int(input(f"★ Calificación ({r}): "))
+        total += restaurantRating
+
+        if restaurantRating >= 4:
+            highRating += 1
+    ratingAverage = total / 10
+    print(f"★ Promedio de las calificaciones: {ratingAverage}")
+    print(f"★ Total de calificaciones entre 4 y 5: {highRating}")
