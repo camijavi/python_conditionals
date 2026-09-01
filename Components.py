@@ -6,7 +6,7 @@ def clearConsole():
 def menuFooterß():
     print(" [0] Volver al Menú Principal")
     print("-" * 55)
-    return input("Seleccione una opción: ").strip()
+    input("Seleccione una opción: ").strip()
 
 def invalidOptionMessage():
     print("\nOpción no válida. Intente de nuevo.")

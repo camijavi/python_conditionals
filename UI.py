@@ -33,7 +33,7 @@ def showNestedIfMenu():
     print(" [3] Clasificación de Calidad de Café")
     print(" [4] Reserva de Hospedaje en Granada")
     print(" [5] Ventas de Ferretería (Mayorista / Minorista)")
-    menuFooter()
+    return menuFooter()
 
 def showForLoopsfMenu():
     clearConsole()
@@ -43,7 +43,7 @@ def showForLoopsfMenu():
     print(" [3] Revisión de inventario")
     print(" [4] Producción de pan")
     print(" [5] Evaluación del servicio")
-    menuFooter()
+    return menuFooter()
 
 def showWhileLoopsMenu():
     clearConsole()
@@ -53,4 +53,4 @@ def showWhileLoopsMenu():
     print(" [3] Cantidad de un pedido")
     print(" [4] Combustible de reparto")
     print(" [5] Reposición de existencias")
-    menuFooter()
+    return menuFooter()
